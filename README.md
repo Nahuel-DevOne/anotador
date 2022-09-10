@@ -1,5 +1,5 @@
 # **`Anotador`** 
-# *`Practica de DOM y localStorage`* 
+# *`Práctica de DOM y localStorage`* 
 ### **`Nahuel-DevOne`**
 [![Contact Me](https://img.shields.io/badge/Email-informational?style=for-the-badge&logo=Mail.Ru&logoColor=fff&color=red)](mailto:nahue.developer1@gmail.com)
 [![LinkedId](https://img.shields.io/badge/LinkedIn-informational?style=for-the-badge&logo=linkedin&logoColor=fff&color=blue)](https://www.linkedin.com/in/nahuel-developer/)
@@ -11,7 +11,7 @@ El proyecto puede interpretarse como un to-do list muy sencillo. Es más que nad
 
 ## *Version 1.0.0:*
 
-- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=netlify&logoColor=fff&color=23272d)](https://...)
+- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=netlify&logoColor=fff&color=23272d)](https://nahuel-devone.github.io/anotador/)
 
 - No tiene incorporada ninguna base de datos, pero usa el localStorage para la persistencia de los datos
 
