@@ -6,7 +6,15 @@ let notas = []
 
 /********** Event Listeners **********/ 
 const eventListeners = () => {
+    // Cuando el usuario agrega una nota nueva
     formulario.addEventListener('submit', agregarNota);
+    // Cuando el documento está listo
+    document.addEventListener('DOMContentLoaded', () => {
+        // Buscan las notas en el localStorage. 
+        // Si no hay notas, se pone un arreglo vacío (porque sino el forEach no funciona, que sería null)
+        notas = JSON.parse(localStorage.getItem('notas')) || []; 
+        crearHTML();
+    });
 }
 
 /********** functions **********/
@@ -61,27 +69,48 @@ const mostrarError = (error) => {
 const crearHTML = () => {
     
     limpiaHTML();
+    
     if(notas.length > 0) {
         notas.forEach(nota => {
-            // Se crea el html
+            // Agrega un botón de eliminar
+            const btnEliminar = document.createElement('a');
+            btnEliminar.classList.add('borrar-nota');
+            btnEliminar.textContent = 'X';
+            // Agrega la función de eliminar
+            btnEliminar.onclick = () => {
+                borrarNota(nota.id);
+            }
+            // Se crea el HTML
             const li = document.createElement('li');
             // Se agrega el texto
             li.textContent = nota.nota;
+            // Se agrega el botón de eliminar
+            li.appendChild(btnEliminar);
             // Se inserta en el html
             listaNotas.appendChild(li);
 
         });
     }
+    sincronizarStorage();
 }
 
-/** Limpiar el HTML */
+// Agrega las notas al local storage
+const sincronizarStorage = () => {
+    localStorage.setItem('notas', JSON.stringify(notas));
+}
+
 // Elimina una nota
+const borrarNota = (id) => {
+    notas = notas.filter(nota => nota.id !== id);
+    crearHTML();
+}
+
+/** Limpia el HTML */
 const limpiaHTML = () => {
     while(listaNotas.firstChild) {
         listaNotas.removeChild(listaNotas.firstChild);
     }
 }
-
 
 // ejecuta las funciones
 eventListeners();

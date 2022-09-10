@@ -3,13 +3,14 @@ h1, h2 {
 }
 
 #contenido {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
+
 .borrar-nota,
 .borrar-nota:hover {
     float: right;
     cursor: pointer;
-    color: red;
+    color: rgb(229, 68, 68);
     font-weight: bold;
 }
 
