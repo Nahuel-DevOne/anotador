@@ -3,10 +3,10 @@ h1, h2 {
 }
 
 #contenido {
-    margin-top: 40px;
+    margin-top: 2rem;
 }
-.borrar-tweet,
-.borrar-tweet:hover {
+.borrar-nota,
+.borrar-nota:hover {
     float: right;
     cursor: pointer;
     color: red;
@@ -14,12 +14,13 @@ h1, h2 {
 }
 
 .error {
-    background-color: red;
+    background-color: rgb(229, 68, 68);
+    border-radius: 5px;
     text-align: center;
     padding: 10px;
     text-transform: uppercase;
     font-weight: bold;
-    max-width: 400px;
+    max-width: 80vw;
     margin: 0 auto;
     color: white;
 }
