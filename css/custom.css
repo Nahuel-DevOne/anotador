@@ -6,12 +6,21 @@ h1, h2 {
     margin-top: 1rem;
 }
 
+li{
+    display: flex;
+    justify-content: space-between;
+    background-color: #09496435;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .borrar-nota,
 .borrar-nota:hover {
-    float: right;
-    cursor: pointer;
+    /* float: right; */
     color: rgb(229, 68, 68);
+    cursor: pointer;
     font-weight: bold;
+    margin-left: 2rem;
 }
 
 .error {
@@ -22,6 +31,6 @@ h1, h2 {
     text-transform: uppercase;
     font-weight: bold;
     max-width: 80vw;
-    margin: 0 auto;
+    margin: 1rem auto;
     color: white;
 }
